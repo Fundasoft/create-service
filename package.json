@@ -1,0 +1,37 @@
+{
+  "name": "create-service",
+  "version": "0.0.1",
+  "description": "A generic scaffolding for Fundasoft's API's and Services",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=production pm2 start ./index.js  -n demo-api",
+    "start-dev": "NODE_ENV=development NODE_HTTPS=true nodemon ./index.js",
+    "test:unit": "NODE_ENV=test jest --config jest.config.js --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fundasoft/create-service.git"
+  },
+  "keywords": [
+    "API",
+    "service",
+    "nodejs"
+  ],
+  "author": "Fundasoft",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Fundasoft/create-service/issues"
+  },
+  "homepage": "https://github.com/Fundasoft/create-service#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.6",
+    "pm2": "^4.5.0"
+  },
+  "devDependencies": {
+    "jest": "^26.6.1",
+    "supertest": "^6.0.0"
+  }
+}
